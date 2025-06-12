@@ -16,6 +16,13 @@ This is where the Adapter Pattern shines.
 
 ---
 
+## 🧱 Evolution
+
+- **Version 1:** The system directly uses a legacy payment class (`LegacyPaymentService`) — tight coupling.
+- **Version 2:** Introduces the Adapter Pattern to abstract the payment system via a common interface (`PaymentProcessor`), enabling both legacy and modern processors to be used interchangeably.
+
+---
+
 ## 📦 Project Structure
 
 ```
@@ -92,6 +99,7 @@ public class StripePaymentProcessor implements PaymentProcessor {
 3. Output:
 ```
 Legacy payment of 4999 cents processed.
+Paid $49.99 using Stripe.
 ```
 
 ---
